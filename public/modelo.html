@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <link rel="stylesheet" type="text/css" href="stylem.css">
+    <!-- Load model-viewer for modern browsers -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+
+    <!-- Load model-viewer for older browsers like IE11 -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <img src="img/logo-uni.png" alt="" class="logo">
+                
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="active" href="0">Modelos</a></li>
+                <li><a href="video.html">Videos</a></li>
+                <li><a href="info.html">Explicación</a></li>
+            </ul>
+        </nav>
+
+        <div class="banner-txt container">
+            <div class="txt-header">
+                <h1><strong>Modelos</strong>
+                    Explicativos
+                </h1>
+
+                <p>
+                    Aprende a usar los dispositivos del Laboratorio de biomecanica.
+                </p>
+
+        </div>
+        
+    </header>
+    
+    <center>
+        <div id="modelo3D" style="width: 80%; height: 500px;">
+            <model-viewer shadow-intensity="1" camera-controls auto-rotate ar
+                id="visualizador3D"
+                alt="Modelo 3D"
+                style="width: 100%; height: 100%;">
+            </model-viewer>
+        </div>
+        <button onclick="mostrarModeloAnterior()">Anterior</button>
+        <button onclick="mostrarModeloSiguiente()">Siguiente</button>
+    </center>
+
+    <script>
+        // Arreglo de rutas de archivo de modelos 3D
+        const modelos = [
+            'Modelos/microscope/microscope.gltf',
+            'Modelos/wheelchair/wheelChair.gltf',
+            'Modelos/test_tube_mutations/Test_Cube.gltf',
+            'Modelos/silla.gltf'
+            // Agrega más rutas de archivos según sea necesario
+        ];
+
+        let modeloActual = 0;
+        const visualizador = document.getElementById('visualizador3D');
+
+        // Función para mostrar el modelo anterior
+        function mostrarModeloAnterior() {
+            modeloActual = (modeloActual - 1 + modelos.length) % modelos.length;
+            visualizador.src = modelos[modeloActual];
+        }
+
+        // Función para mostrar el siguiente modelo
+        function mostrarModeloSiguiente() {
+            modeloActual = (modeloActual + 1) % modelos.length;
+            visualizador.src = modelos[modeloActual];
+        }
+
+        // Mostrar el primer modelo al cargar la página
+        visualizador.src = modelos[modeloActual];
+    </script>
+    
+    <React.StrictMode></React.StrictMode>
+    
+
+    
+   
+    <section>
+        
+        <div class="about container">
+            <h2>Dispositivos</h2>
+            <p>
+                Aquí podras tener un vista previa de uno de nuestros dispositivos del laboratorio en tiempo real por medio del visor 3D 
+            </p>
+            <div class="icons-about">
+                <div class="icon-about">
+                    <img src="img/Microscopio.svg" alt="">
+                    <div class="icon-txt">
+                        <h3>Analisis y desarrollo</h3>
+                        <p>Exploración de nuevos metodos</p>
+                    </div>
+                </div>
+                <div class="icon-about">
+                    <img src="img/wheel-chair-99312.svg" alt="">
+                    <div class="icon-txt">
+                        <h3>Silla de ruedas</h3>
+                        <p>Diseñado para personas con movilidad reducida</p>
+                    </div>
+                </div>
+                <div class="icon-about">
+                    <img src="img/Trabajo medico.svg" alt="">
+                    <div class="icon-txt">
+                        <h3>Investigación</h3>
+                        <p>Avances en el campo de la medicina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <main class="services">
+
+        <div class="container">
+
+            <div class="services-container">
+
+                <div>
+
+                    
+
+                <div class="services-txt">
+
+                    <h2>Servicio</h2>
+
+                    <p>
+                        Brindamos orientación a los estudiantes para enriquecer su conocimiento y formar profesionales
+                    </p>
+
+                    <a class="btn-c" href="#">Contacto</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="portfolio">
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-sec container">
+            
+            <h2>Contactos</h2>
+            <p class="f-txt">
+                Puedes escribirnos al correo para brindarte asesoria y disponibilidad de los laboratorios a contactenos@uao.edu.co 
+            </p>
+
+            <div class="content-footer">
+
+                <div class="links">
+                    <div class="link">
+                        <h3>Ubicación</h3>
+                        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.9856354097633!2d-76.5255612261674!3d3.3536579518638234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a1bce83eb4eb%3A0x374b9a9955d030e8!2sUniversidad%20Aut%C3%B3noma%20De%20Occidente!5e0!3m2!1ses!2sco!4v1713135762679!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="link">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="link">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="link">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="link">
+                        <h3>Enlaces</h3>
+                        <p><a href="index.html">Inicio</a></p>
+                        <p><a href="modelo.html">Modelos</a></p>
+                        <p><a href="video.html">Video</a></p>
+                        <p><a href="info.html">Explicación</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

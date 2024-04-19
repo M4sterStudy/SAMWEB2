@@ -1,0 +1,11 @@
+Model Information:
+* title:	Test Tube (Mutations)
+* source:	https://sketchfab.com/3d-models/test-tube-mutations-96785b6fa4324a498bc46860e2bbc49c
+* author:	bossdeff (https://sketchfab.com/bossdeff)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Test Tube (Mutations)" (https://sketchfab.com/3d-models/test-tube-mutations-96785b6fa4324a498bc46860e2bbc49c) by bossdeff (https://sketchfab.com/bossdeff) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
